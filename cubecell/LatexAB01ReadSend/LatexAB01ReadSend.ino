@@ -96,12 +96,12 @@ void computeStats(int16_t *a, size_t n,
   int16_t median0 = (m & 1) ? vals[m / 2]
                             : (int16_t)((vals[m / 2 - 1] + vals[m / 2]) / 2);
 
-  // 3) Ne garder que les valeurs dans ±10 mm de la médiane initiale
+  // 3) Ne garder que les valeurs dans ±5 mm de la médiane initiale
   static int16_t filt[256];
   size_t k = 0;
   for (size_t i = 0; i < m; i++) {
     int16_t v = vals[i];
-    if (abs(v - median0) <= 10) filt[k++] = v;
+    if (abs(v - median0) <= 5) filt[k++] = v;
   }
 
   validCount = k;
