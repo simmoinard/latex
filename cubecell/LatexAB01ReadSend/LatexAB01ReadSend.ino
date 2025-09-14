@@ -13,7 +13,7 @@ const char* APP_Key = "1763B6C5B89584F4E5F9BC524179B7E3";
 int temps = 300;
 
 // Paramètres d'acquisition
-const uint16_t SAMPLES_PER_SALVE = 20;    // nombre de mesures par salve
+const uint16_t SAMPLES_PER_SALVE = 40;    // nombre de mesures par salve
 const unsigned ACQ_FREQ_HZ       = 50;    // Hz (max 100Hz)
 const unsigned long PULSE_TIMEOUT_US = 20000; // timeout pour pulseIn
 
